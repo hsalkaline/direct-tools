@@ -81,11 +81,11 @@
 							    outwardIssue: { key: originalIssueData.key }
 							};
 
-						microAjax(apiPath + '/issue', function() {
+						microAjax(apiPath + '/issueLink', function() {
 							linkData.inwardIssue.key = originalIssueData.key;
 							linkData.outwardIssue.key = newIssueData.key;
 
-							microAjax(apiPath + '/issue', function() {
+							microAjax(apiPath + '/issueLink', function() {
 								document.location = webPath + newIssueData.key;		
 							}, JSON.stringify(linkData));
 						}, JSON.stringify(linkData));
