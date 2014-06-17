@@ -23,9 +23,8 @@
 			}
 		};
 
-		if (postBody !== "") {
+		if (postBody !== '') {
 			req.open("POST", url, true);
-			// req.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
 			req.setRequestHeader('Content-Type', 'application/json');
 		} else {
 			req.open("GET", url, true);
